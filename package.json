@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
-	  "prestart": "node buildScript/startMessage.js",
-	  "start": "npm-run-all --parallel security-check open:src",
-	  "open:src": "node buildScript/srcServer.js",
-	  "security-check": "nsp check",
-	  "localtunnel": "lt --port 3000",
-	  "share": "npm-run-all --parallel open:src localtunnel"
+    "prestart": "babel-node buildScript/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScript/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "David Zavala",
   "license": "MIT",
@@ -16,11 +16,8 @@
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "6.16.0",
-    "babel-core": "6.17.0",
-    "babel-loader": "6.2.5",
-    "babel-preset-latest": "6.16.0",
-    "babel-register": "6.16.3",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
     "chai": "3.5.0",
     "chalk": "1.1.3",
     "cheerio": "0.22.0",
