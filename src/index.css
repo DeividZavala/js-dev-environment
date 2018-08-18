@@ -3,5 +3,6 @@ body {
 }
 
 table th {
-  padding: 5px
+  padding: 5px;
+  background: rgba(0,0,0,.7);
 }
